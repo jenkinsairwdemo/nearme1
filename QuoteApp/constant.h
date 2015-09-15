@@ -14,11 +14,24 @@
  * the License. *
  */
 
-#define KINVEY_APP_KEY				@"kid_PVSldxB6vq"
-#define KINVEY_APP_SECRET			@"51dd16bd82434ad4b5383df1e70bc9e6"
+/* Kinvey
+ #define KINVEY_APP_KEY				@"kid_PVSldxB6vq"
+ #define KINVEY_APP_SECRET			@"51dd16bd82434ad4b5383df1e70bc9e6"
+ #define RED_COLOR [UIColor colorWithRed:0.2196 green:0.0824 blue:0.0353 alpha:1.0]
+ #define TINT_COLOR [UIColor colorWithRed:0.9686 green:0.7176 blue:0.2353 alpha:1.0]
+ #define BAR_COLOR [UIColor colorWithRed:0.8549 green:0.3137 blue:0.1686 alpha:1.0]
+ #define ANIMATION_DURATION 0.3
+ */
 
+// AirWatch
+#define KINVEY_APP_KEY				@"kid_-1N-VDEK4l"
+#define KINVEY_APP_SECRET			@"83d905046d254b72aac0516b848601f5"
+// RED: 0 161 222
+// BAR: 97 99 101
+// TINT: 253 200 47
 
-#define RED_COLOR [UIColor colorWithRed:0.2196 green:0.0824 blue:0.0353 alpha:1.0]
-#define TINT_COLOR [UIColor colorWithRed:0.9686 green:0.7176 blue:0.2353 alpha:1.0]
-#define BAR_COLOR [UIColor colorWithRed:0.8549 green:0.3137 blue:0.1686 alpha:1.0]
+#define BAR_COLOR [UIColor colorWithRed:0.0000 green:0.6314 blue:0.8706 alpha:1.0]
+#define TINT_COLOR [UIColor colorWithRed:0.3804 green:0.3882 blue:0.3961 alpha:1.0]
+#define RED_COLOR [UIColor colorWithRed:0.9922 green:0.7843 blue:0.1843 alpha:1.0]
 #define ANIMATION_DURATION 0.3
+
