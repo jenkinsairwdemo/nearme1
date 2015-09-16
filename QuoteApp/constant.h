@@ -29,7 +29,8 @@
 #define KINVEY_APP_KEY				@"kid_-1N-VDEK4l"
 #define KINVEY_APP_SECRET			@"83d905046d254b72aac0516b848601f5"
 #define BAR_COLOR [UIColor colorWithRed:0.0000 green:0.6314 blue:0.8706 alpha:1.0]
-#define TINT_COLOR [UIColor colorWithRed:0.3804 green:0.3882 blue:0.3961 alpha:1.0]
+// #define TINT_COLOR [UIColor colorWithRed:0.3804 green:0.3882 blue:0.3961 alpha:1.0]
+#define TINT_COLOR [UIColor colorWithRed:0.7882 green:0.7922 blue:0.7843 alpha:1.0]
 #define RED_COLOR [UIColor colorWithRed:0.9922 green:0.7843 blue:0.1843 alpha:1.0]
 #define ANIMATION_DURATION 0.3
 

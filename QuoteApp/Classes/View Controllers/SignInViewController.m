@@ -13,7 +13,10 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License. *
  */
+#import <KinveyKit/KinveyKit.h>
 #import "SignInViewController.h"
+
+
 
 #import "DejalActivityView.h"
 
@@ -24,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *demoButton;
 
 - (IBAction)textFieldEditingDidChange:(id)sender;
 
@@ -59,6 +63,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+#if 0
 
 	self.title = LOC(SIVC_TITLE);
 	[self.signUpButton setTitle:LOC(SIVC_SIGNUP)
@@ -70,6 +75,25 @@
     
     self.view.backgroundColor = BAR_COLOR;
     self.contentView.backgroundColor = BAR_COLOR;
+#else
+    self.title = LOC(SIVC_TITLE);
+    [self.signUpButton setTitle:LOC(SIVC_SIGNUP)
+                       forState:UIControlStateNormal];
+    [self.loginButton setTitle:LOC(SIVC_LOGIN)
+                      forState:UIControlStateNormal];
+    self.usernameField.placeholder = LOC(SIVC_USERNAME);
+    self.passwordField.placeholder = LOC(SIVC_PASSWORD);
+
+    self.view.backgroundColor = BAR_COLOR;
+    self.contentView.backgroundColor = BAR_COLOR;
+
+    self.loginButton.hidden = YES;
+    self.usernameField.hidden = YES;
+    self.passwordField.hidden = YES;
+    self.signUpButton.hidden = YES;
+    [self.demoButton setTitle:@"Log In" forState:UIControlStateNormal];
+
+#endif
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -181,7 +205,45 @@
 }
 
 - (IBAction)pressedLogin:(id)sender{
-    
+
+#if 0
+    [KCSUser presentMICLoginViewControllerWithRedirectURI:@"aw://"
+                                                  timeout:60 * 5 // Timeout after 5 minutes
+                                      withCompletionBlock:^(KCSUser *user, NSError *errorOrNil, KCSUserActionResult result)
+    {
+        if (user != nil) {
+            [self.navigationController dismissViewControllerAnimated:NO
+                                                          completion:^{
+                                                              if (self.completionBlock) {
+                                                                  self.completionBlock();
+                                                                  self.completionBlock = nil;
+                                                              }
+                                                          }];
+        } else if (result == KCSUserInteractionCancel) {
+            //result parameter will be KCSUserInteractionCancel if the user hit the close button
+        } else if (result == KCSUserInteractionTimeout || errorOrNil != nil) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOC(ERROR)
+                                                                message: @"Login timed out"
+                                                               delegate:nil
+                                                      cancelButtonTitle:LOC(OKAY)
+                                                      otherButtonTitles:nil];
+            [alertView show];
+
+            //result parameter will be KCSUserInteractionTimeout if the user didn't finish the authentication process before the timeout
+        } else if (errorOrNil != nil) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOC(ERROR)
+                                                                message:errorOrNil.localizedDescription ? errorOrNil.localizedDescription : LOC(ERR_SMTH_WENT_WRONG)
+                                                               delegate:nil
+                                                      cancelButtonTitle:LOC(OKAY)
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        } else {
+            //should never happen!
+        }
+    }];
+
+#else
+
 	[DejalBezelActivityView activityViewForView:self.view];
     
     //Login Kinvey user
@@ -210,6 +272,7 @@
                                                                                            otherButtonTitles:nil];
                                                  [alertView show];
 											 }];
+#endif
 }
 
 

@@ -46,12 +46,6 @@
 		1BD60EFF18D21350002496B4 /* BaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD60EFD18D21350002496B4 /* BaseModalViewController.m */; };
 		1BD60F0018D21350002496B4 /* BaseModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD60EFE18D21350002496B4 /* BaseModalViewController.xib */; };
 		1BD60F0318D24502002496B4 /* QuoteOrderModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD60F0218D24502002496B4 /* QuoteOrderModalViewController.m */; };
-		BDC9AD411AADB4D4002F993B /* com.kinvey.KinveyKit.docset in Resources */ = {isa = PBXBuildFile; fileRef = BDC9AD3E1AADB4D4002F993B /* com.kinvey.KinveyKit.docset */; };
-		BDC9AD421AADB4D4002F993B /* com.kinvey.KinveyKit.docset in Resources */ = {isa = PBXBuildFile; fileRef = BDC9AD3E1AADB4D4002F993B /* com.kinvey.KinveyKit.docset */; };
-		BDC9AD431AADB4D4002F993B /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC9AD3F1AADB4D4002F993B /* KinveyKit.framework */; };
-		BDC9AD441AADB4D4002F993B /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC9AD3F1AADB4D4002F993B /* KinveyKit.framework */; };
-		BDC9AD451AADB4D4002F993B /* LICENSES in Resources */ = {isa = PBXBuildFile; fileRef = BDC9AD401AADB4D4002F993B /* LICENSES */; };
-		BDC9AD461AADB4D4002F993B /* LICENSES in Resources */ = {isa = PBXBuildFile; fileRef = BDC9AD401AADB4D4002F993B /* LICENSES */; };
 		C67609FE18A2826400BAC60D /* NewQuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67609FC18A2826400BAC60D /* NewQuoteViewController.m */; };
 		C67609FF18A2826400BAC60D /* NewQuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C67609FD18A2826400BAC60D /* NewQuoteViewController.xib */; };
 		C6760A0818A282E200BAC60D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6760A0618A282E200BAC60D /* HomeViewController.m */; };
@@ -87,6 +81,8 @@
 		C6A3113618A110A000916A1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A3113518A110A000916A1A /* MessageUI.framework */; };
 		C6A3113818A11CDE00916A1A /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A3113718A11CDE00916A1A /* SignInViewController.xib */; };
 		D367641F1BA8745D007AD727 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D367641E1BA8745D007AD727 /* LaunchScreen.xib */; };
+		D36764211BA9C7E0007AD727 /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36764201BA9C7E0007AD727 /* KinveyKit.framework */; };
+		D36764231BA9C80F007AD727 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36764221BA9C80F007AD727 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,9 +159,6 @@
 		1BD60EFE18D21350002496B4 /* BaseModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseModalViewController.xib; sourceTree = "<group>"; };
 		1BD60F0118D24502002496B4 /* QuoteOrderModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteOrderModalViewController.h; sourceTree = "<group>"; };
 		1BD60F0218D24502002496B4 /* QuoteOrderModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteOrderModalViewController.m; sourceTree = "<group>"; };
-		BDC9AD3E1AADB4D4002F993B /* com.kinvey.KinveyKit.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = com.kinvey.KinveyKit.docset; sourceTree = "<group>"; };
-		BDC9AD3F1AADB4D4002F993B /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
-		BDC9AD401AADB4D4002F993B /* LICENSES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSES; sourceTree = "<group>"; };
 		C67609EF18A2761400BAC60D /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		C67609FB18A2826400BAC60D /* NewQuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewQuoteViewController.h; sourceTree = "<group>"; };
 		C67609FC18A2826400BAC60D /* NewQuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewQuoteViewController.m; sourceTree = "<group>"; };
@@ -219,6 +212,8 @@
 		C6A3113518A110A000916A1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C6A3113718A11CDE00916A1A /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		D367641E1BA8745D007AD727 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		D36764201BA9C7E0007AD727 /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
+		D36764221BA9C80F007AD727 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +221,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36764231BA9C80F007AD727 /* WebKit.framework in Frameworks */,
 				C6A3113618A110A000916A1A /* MessageUI.framework in Frameworks */,
-				BDC9AD431AADB4D4002F993B /* KinveyKit.framework in Frameworks */,
+				D36764211BA9C7E0007AD727 /* KinveyKit.framework in Frameworks */,
 				C6A3113418A1108900916A1A /* SystemConfiguration.framework in Frameworks */,
 				C6A3113218A1107D00916A1A /* Social.framework in Frameworks */,
 				C6A3113018A1107400916A1A /* Security.framework in Frameworks */,
@@ -246,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6A3106A18A0F6D700916A1A /* XCTest.framework in Frameworks */,
-				BDC9AD441AADB4D4002F993B /* KinveyKit.framework in Frameworks */,
 				C6A3106C18A0F6D700916A1A /* UIKit.framework in Frameworks */,
 				C6A3106B18A0F6D700916A1A /* Foundation.framework in Frameworks */,
 			);
@@ -255,16 +250,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BDC9AD3D1AADB4D4002F993B /* KinveyKit-1.28.0 */ = {
-			isa = PBXGroup;
-			children = (
-				BDC9AD3E1AADB4D4002F993B /* com.kinvey.KinveyKit.docset */,
-				BDC9AD3F1AADB4D4002F993B /* KinveyKit.framework */,
-				BDC9AD401AADB4D4002F993B /* LICENSES */,
-			);
-			path = "KinveyKit-1.28.0";
-			sourceTree = "<group>";
-		};
 		C6A3104418A0F6D700916A1A = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +273,7 @@
 		C6A3104F18A0F6D700916A1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D36764221BA9C80F007AD727 /* WebKit.framework */,
 				C6A3113518A110A000916A1A /* MessageUI.framework */,
 				C6A3113318A1108900916A1A /* SystemConfiguration.framework */,
 				C6A3113118A1107D00916A1A /* Social.framework */,
@@ -354,7 +340,7 @@
 		C6A3108118A106DF00916A1A /* Externals */ = {
 			isa = PBXGroup;
 			children = (
-				BDC9AD3D1AADB4D4002F993B /* KinveyKit-1.28.0 */,
+				D36764201BA9C7E0007AD727 /* KinveyKit.framework */,
 				C6A3108418A106DF00916A1A /* DejalActivityView */,
 				C6A3108D18A106DF00916A1A /* STBlocks.h */,
 				C6A3108F18A106DF00916A1A /* SynthesizeSingleton.h */,
@@ -580,7 +566,6 @@
 			files = (
 				1BC2439C18C7038300D1E15B /* QuoteOrderSubView.xib in Resources */,
 				C6A3105B18A0F6D700916A1A /* InfoPlist.strings in Resources */,
-				BDC9AD411AADB4D4002F993B /* com.kinvey.KinveyKit.docset in Resources */,
 				1B4773F718C5BFDF005E1A9C /* MainTableViewCellForIPhone.xib in Resources */,
 				C6760A0918A282E200BAC60D /* HomeViewController.xib in Resources */,
 				1BC243A418C7B14D00D1E15B /* ProductSubView.xib in Resources */,
@@ -602,7 +587,6 @@
 				C6A3108018A0F71B00916A1A /* MainWindow.xib in Resources */,
 				D367641F1BA8745D007AD727 /* LaunchScreen.xib in Resources */,
 				1BAECC8118E43DE1007B83BE /* AboutViewController.xib in Resources */,
-				BDC9AD451AADB4D4002F993B /* LICENSES in Resources */,
 				1B4773E818C4634D005E1A9C /* ProductCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,8 +595,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC9AD421AADB4D4002F993B /* com.kinvey.KinveyKit.docset in Resources */,
-				BDC9AD461AADB4D4002F993B /* LICENSES in Resources */,
 				C6A3107418A0F6D700916A1A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +772,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Externals/KinveyKit-1.28.0",
+					"$(PROJECT_DIR)/Externals",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuoteApp/QuoteSample-Prefix.pch";
@@ -812,6 +795,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Externals/KinveyKit-1.28.0",
+					"$(PROJECT_DIR)/Externals",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuoteApp/QuoteSample-Prefix.pch";

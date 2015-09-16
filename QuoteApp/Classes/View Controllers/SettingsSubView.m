@@ -80,6 +80,8 @@
     self.pushLabel.text = LOC(SVC_PUSH_LABEL);
     self.emailConfirmationLabel.text = LOC(SVC_EMAIL_CONFIRMATION_LABEL);
     [self.editButton setTitle:LOC(EDIT) forState:UIControlStateNormal];
+
+    self.titleLabel.textColor = BAR_COLOR;
     
     //Setup UI by user attribute value
     self.emailConfirmationSwitch.on = [[[KCSUser activeUser] getValueForAttribute:USER_INFO_KEY_EMAIL_CONFIRMATION_ENABLE] boolValue];

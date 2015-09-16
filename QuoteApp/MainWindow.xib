@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
@@ -21,7 +22,6 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="companylogo" translatesAutoresizingMaskIntoConstraints="NO" id="kl0-Zi-V7X">
                         <rect key="frame" x="224" y="473" width="320" height="79"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="320" id="Df6-LM-ZdK"/>
                             <constraint firstAttribute="height" constant="79" id="Xff-bR-yRM"/>
@@ -29,7 +29,6 @@
                     </imageView>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qeu-lu-xtQ">
                         <rect key="frame" x="374" y="910" width="20" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" cyan="0.0" magenta="0.63" yellow="0.80000000000000004" black="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -41,18 +40,10 @@
                     <constraint firstAttribute="centerX" secondItem="kl0-Zi-V7X" secondAttribute="centerX" id="yh3-Ml-GbV"/>
                 </constraints>
             </view>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-            <nil key="simulatedDestinationMetrics"/>
         </viewController>
         <tabBarController definesPresentationContext="YES" id="QOT-1N-FgQ" customClass="TabBarController">
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-            <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-            <nil key="simulatedDestinationMetrics"/>
             <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" id="ojd-Cp-H7b">
                 <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -64,46 +55,21 @@
                 <viewController id="qpZ-uy-npq" customClass="QuoteHomeViewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gNF-Ka-c81"/>
                     <navigationItem key="navigationItem" title="Item" id="w0E-9p-EH2"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                 </viewController>
                 <viewController nibName="HomeViewController" id="ETq-GW-L7d" customClass="OrderHomeViewController">
                     <tabBarItem key="tabBarItem" title="Item" id="nlm-1h-cGx"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Hor-v8-aHC"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                 </viewController>
                 <viewController nibName="ProductsViewController" id="HuJ-tP-7ij" customClass="ProductHomeViewController">
                     <tabBarItem key="tabBarItem" title="Item" id="RhV-Ab-rW0"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="glp-tF-ctf"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                 </viewController>
                 <viewController nibName="NewQuoteViewController" id="NFM-NC-0uv" customClass="NewQuoteViewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5GO-gi-ec6"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="OhC-Ef-Vdh"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                 </viewController>
                 <viewController id="peH-ng-U9s" customClass="AboutViewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gGs-Jp-8BO"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                 </viewController>
             </viewControllers>
         </tabBarController>
@@ -116,6 +82,11 @@
         </customObject>
     </objects>
     <resources>
-        <image name="companylogo" width="452" height="110"/>
+        <image name="companylogo" width="327" height="110"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
