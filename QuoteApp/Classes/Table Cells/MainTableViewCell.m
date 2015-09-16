@@ -73,10 +73,10 @@
             
             //setup quotes cell
             Quote *quote = (Quote *)item;
-            self.dateLabel.text = [formatter stringFromDate:quote.meta.creationTime];
-            self.noLabel.text = quote.referenceNumber;
-            self.startSubscriptionDateLabel.text = [formatter stringFromDate:quote.startSubscriptionDate];
-            self.statusPriceLabel.text = quote.totalPrice;
+            self.dateLabel.text = quote.referenceNumber;
+            self.noLabel.text = quote.activeUsers;
+            self.startSubscriptionDateLabel.text = quote.businessLogicScripts;
+            self.statusPriceLabel.text = quote.scheduledBusinessLogic;
         }
     }
 }

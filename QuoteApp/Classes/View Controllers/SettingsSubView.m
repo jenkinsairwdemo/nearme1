@@ -283,8 +283,10 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.backgroundView = [UIView new];
     cell.selectedBackgroundView = [UIView new];
-    
-    cell.titleLabel.text = [self titleForCellWithKey:[self allUserInfoKey][indexPath.row]];
+
+    NSString *key = [self allUserInfoKey][indexPath.row];
+    cell.titleLabel.text = [self titleForCellWithKey:key];
+    cell.valueTextField.text = [self defaultValueForKey:key];
     NSString *value = (NSString *)self.userData[indexPath.row];
     if (![value isEqualToString:@""]) {
         cell.valueTextField.text = value;
@@ -309,6 +311,27 @@
 
 
 #pragma mark - Utils
+
+- (NSString *)defaultValueForKey:(NSString *)key{
+
+    if ([key isEqualToString:USER_INFO_KEY_CONTACT]) {
+        return @"Blake Brannon";
+    }
+    if ([key isEqualToString:USER_INFO_KEY_COMPANY]) {
+        return @"World Wide Enterprises";
+    }
+    if ([key isEqualToString:USER_INFO_KEY_ACCOUNT_NUMBER]) {
+        return @"";
+    }
+    if ([key isEqualToString:USER_INFO_KEY_PHONE]) {
+        return @"(555)123-4567";
+    }
+    if ([key isEqualToString:USER_INFO_KEY_EMAIL]) {
+        return @"blake.brannon@world-wide-enterprises.com";
+    }
+
+    return nil;
+}
 
 - (NSString *)titleForCellWithKey:(NSString *)key{
     

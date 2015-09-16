@@ -18,9 +18,9 @@
 
 @interface DataHelper ()
 
-@property (nonatomic, strong) KCSLinkedAppdataStore *quotesStore;
-@property (nonatomic, strong) KCSLinkedAppdataStore *ordersStore;
-@property (nonatomic, strong) KCSLinkedAppdataStore *productsStore;
+@property (nonatomic, strong) KCSCachedStore *quotesStore;
+@property (nonatomic, strong) KCSCachedStore *ordersStore;
+@property (nonatomic, strong) KCSCachedStore *productsStore;
 @property (nonatomic, strong) NSDictionary *contentTypesByName;
 
 @end
@@ -49,19 +49,19 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataHelper)
         //Quotes collection
         KCSCollection *collectionQuote = [KCSCollection collectionFromString:QUOTES_COLLECTIONS_NAME
                                                                      ofClass:[Quote class]];
-        self.quotesStore = [KCSLinkedAppdataStore storeWithOptions:@{ KCSStoreKeyResource       : collectionQuote,                  //collection
+        self.quotesStore = [KCSCachedStore storeWithOptions:@{ KCSStoreKeyResource       : collectionQuote,                  //collection
                                                                       KCSStoreKeyCachePolicy    : @(KCSCachePolicyNetworkFirst)}];  //default cache policy
         
         //Orders collection
         KCSCollection *collectionOrder = [KCSCollection collectionFromString:ORDERS_COLLECTIONS_NAME
                                                                      ofClass:[Order class]];
-        self.ordersStore = [KCSLinkedAppdataStore storeWithOptions:@{ KCSStoreKeyResource       : collectionOrder,                  //collection
+        self.ordersStore = [KCSCachedStore storeWithOptions:@{ KCSStoreKeyResource       : collectionOrder,                  //collection
                                                                       KCSStoreKeyCachePolicy    : @(KCSCachePolicyNetworkFirst)}];  //default cache policy
         
         //Products collection
         KCSCollection *collectionProduct = [KCSCollection collectionFromString:PRODUCTS_COLLECTIONS_NAME
                                                                        ofClass:[Product class]];
-        self.productsStore = [KCSLinkedAppdataStore storeWithOptions:@{ KCSStoreKeyResource      : collectionProduct,                //collection
+        self.productsStore = [KCSCachedStore storeWithOptions:@{ KCSStoreKeyResource      : collectionProduct,                //collection
                                                                        KCSStoreKeyCachePolicy   : @(KCSCachePolicyNetworkFirst)}];  //default cache policy
 	}
     
@@ -145,9 +145,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataHelper)
     }
     
     //Add originator query
-    [query addQueryForJoiningOperator:kKCSAnd
-                            onQueries:[self queryForOriginatorEqualsActiveUser], nil];
-    
+//    [query addQueryForJoiningOperator:kKCSAnd
+//                            onQueries:[self queryForOriginatorEqualsActiveUser], nil];
+
     //Kinvey: Load entity from Quote collection which correspond query
 	[self.quotesStore queryWithQuery:query
                  withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
@@ -218,10 +218,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataHelper)
                                      inFields:[Order textFieldsName]];
     }
     
-    //Add originator query
-    [query addQueryForJoiningOperator:kKCSAnd
-                            onQueries:[self queryForOriginatorEqualsActiveUser], nil];
-    
+//    //Add originator query
+//    [query addQueryForJoiningOperator:kKCSAnd
+//                            onQueries:[self queryForOriginatorEqualsActiveUser], nil];
+
     //Kinvey: Load entity from Orders collection which correspond query
     [self.ordersStore queryWithQuery:query
                  withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {

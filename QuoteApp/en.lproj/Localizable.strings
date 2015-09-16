@@ -37,10 +37,10 @@
 "SIVC_PASSWORD"="password";
 
 //TabBarController
-"TBC_PRODUCTS"="Products";
-"TBC_QUOTE"="Quotes";
-"TBC_ORDER"="Orders";
-"TBC_NEW_QUOTES"="New Quote";
+"TBC_PRODUCTS"="Catalog";
+"TBC_QUOTE"="Opportunities";
+"TBC_ORDER"="At Risk";
+"TBC_NEW_QUOTES"="New Opportunity";
 "TBC_ABOUT"="About";
 "TBC_SETTINGS"="Settings";
 
@@ -62,24 +62,24 @@
 
 //Detail View
 "DV_PRODUCT_TITLE"="Product: ";
-"DV_REFERENCE_NUMBER"="Reference Number: ";
-"DV_ACTIVE_USER"="Active User: ";
-"DV_BUSINESS_LOGIC_SCRIPTS"="Business Logic Scripts: ";
-"DV_SCHEDULED_BUSINESS_LOGIC"="Scheduled Business Logic: ";
-"DV_COLLABORATORS"="Collaborators: ";
-"DV_BACKEND_ENVIRONMENTS"="Backend Environments: ";
-"DV_DATA_STORAGE"="Data Storage: ";
-"DV_BUSINESS_EXECUTION_TIME_LIMIT"="Business Logic Execution Time Limit: ";
-"DV_START_SUBSCRIPTION_DATE"="Start Subscription Date: ";
+"DV_REFERENCE_NUMBER"="Customer: ";
+"DV_ACTIVE_USER"="Location: ";
+"DV_BUSINESS_LOGIC_SCRIPTS"="Opportunity Size: ";
+"DV_SCHEDULED_BUSINESS_LOGIC"="Project Timeline: ";
+"DV_COLLABORATORS"="Primary Contact Name: ";
+"DV_BACKEND_ENVIRONMENTS"="Address: ";
+"DV_DATA_STORAGE"="Phone: ";
+"DV_BUSINESS_EXECUTION_TIME_LIMIT"="Email: ";
+"DV_START_SUBSCRIPTION_DATE"="Project Details: ";
 "DV_TOTAL_COST"="Total Cost: ";
-"DV_ORDER_TITLE"="Order Details";
-"DV_QUOTE_TITLE"="Your Quote";
+"DV_ORDER_TITLE"="Opportunity Details";
+"DV_QUOTE_TITLE"="Opportunity Details";
 "DV_MESSAGE_ERROR_CREATE_QUOTE"="Error create qoute";
 "DV_MESSAGE_ORDER_CONFIRMATION_TITLE"="Order Confirmation";
 "DV_MESSAGE_ORDER_CONFIRMATION_TEXT"="Your Order has been received.";
 "DV_MESSAGE_ERROR_CREATE_ORDER"="Error create order";
-"DV_BUTTON_RECREATE_ORDER"="Recreate Order";
-"DV_BUTTON_SUBMIT_ORDER"="Submit Order";
+"DV_BUTTON_RECREATE_ORDER"="";
+"DV_BUTTON_SUBMIT_ORDER"=""; // TODO(Brian): Is this the right thing to do here?
 
 //New Quote View Controller
 "NQV_PLACEHOLDER_PRODUCT"="Product (required)";
@@ -97,16 +97,16 @@
 
 //Main Table View Header
 "MTVH_TITLE_ORDER"="My Orders";
-"MTVH_DATE_ORDER"="Order Date";
-"MTVH_NO_ORDER"="Order No.";
-"MTVH_START_SUBSCRIPTION_DATE"="Start Date";
-"MTVH_STATUS_ORDER"="Status";
+"MTVH_DATE_ORDER"="Customer";
+"MTVH_NO_ORDER"="Location";
+"MTVH_START_SUBSCRIPTION_DATE"="Opp Size";
+"MTVH_STATUS_ORDER"="Project Timeline";
 "MTVH_MORE_ORDER"="More";
-"MTVH_TITLE_QUOTE"="My Quotes";
-"MTVH_DATE_QUOTE"="Quote Date";
-"MTVH_NO_QUOTE"="Quote No.";
-"MTVH_PRICE_QUOTE"="Price";
-"MTVH_MORE_QUOTE"="View & Order";
+"MTVH_TITLE_QUOTE"="Opportunities";
+"MTVH_DATE_QUOTE"="Customer";
+"MTVH_NO_QUOTE"="Location";
+"MTVH_PRICE_QUOTE"="Project Timeline";
+"MTVH_MORE_QUOTE"="More";
 
 //Home and Search View Controller
 "HaSVC_LEBEL_COUNT_RESULT"="Search %d items";
@@ -114,12 +114,12 @@
 //Quote Home View Controller
 "QHVC_CELL_NO_QUOTE"="You have no quote";
 "QHVC_REFRESH_CONTROL_TITLE"="Update quote list";
-"QHVC_TITLE"="My Quotes";
+"QHVC_TITLE"="My Opportunities";
 
 //Order Home View Controller
 "OHVC_CELL_NO_ORDER"="You have no order";
 "OHVC_REFRESH_CONTROL_TITLE"="Update order list";
-"OHVC_TITLE"="My Orders";
+"OHVC_TITLE"="At-Risk Opps";
 
 //Product Home View Controller
 "PHVC_CELL_NO_PRODUCTS"="No product";

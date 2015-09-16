@@ -77,7 +77,7 @@
     
     if (item) {
         _item = item;
-        NSString *productLabelText = [[LOC(DV_PRODUCT_TITLE) stringByAppendingString:@"\n"] stringByAppendingString:item.product.title];
+        NSString *productLabelText = @"";//[[LOC(DV_PRODUCT_TITLE) stringByAppendingString:@"\n"] stringByAppendingString:item.product.title];
         
         CGSize size = CGSizeMake(self.view.frame.size.width, 0);
         
@@ -105,8 +105,9 @@
         if (item.dataStorage) self.dataStorageLabel.text = [LOC(DV_DATA_STORAGE) stringByAppendingString:item.dataStorage];
         if (item.businessLogicExecutionTimeLimit) self.businessLogicExecutionTimeLimitLabel.text = [LOC(DV_BUSINESS_EXECUTION_TIME_LIMIT) stringByAppendingString:item.businessLogicExecutionTimeLimit];
         if (item.totalPrice) self.totalCostLabel.text = [LOC(DV_TOTAL_COST) stringByAppendingString:item.totalPrice];
-        if (item.startSubscriptionDate) self.startSubscriptionDateLabel.text = [LOC(DV_START_SUBSCRIPTION_DATE) stringByAppendingString:[[DataHelper instance].formatter stringFromDate:item.startSubscriptionDate]];
-        
+//        if (item.startSubscriptionDate) self.startSubscriptionDateLabel.text = [LOC(DV_START_SUBSCRIPTION_DATE) stringByAppendingString:[[DataHelper instance].formatter stringFromDate:item.startSubscriptionDate]];
+//        if (item.startSubscriptionDate) self.startSubscriptionDateLabel.text = [LOC(DV_START_SUBSCRIPTION_DATE) stringByAppendingString:item.startSubscriptionDate];
+
         if ([self.item isKindOfClass:[Order class]]) {
             self.titleLabel.text = LOC(DV_ORDER_TITLE);
         }else{
