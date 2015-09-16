@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *demoButton;
+@property (nonatomic, retain) UIViewController *webViewController;
 
 - (IBAction)textFieldEditingDidChange:(id)sender;
 
@@ -63,6 +64,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    _webViewController = [[UIViewController alloc] init];
+
 #if 0
 
 	self.title = LOC(SIVC_TITLE);
@@ -204,7 +208,74 @@
 											  }];
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSURL* url = request.URL;
+    if ([KCSUser isValidMICRedirectURI:@"aw://" forURL:url]) {
+        [KCSUser parseMICRedirectURI:@"aw://"
+                              forURL:url
+                 withCompletionBlock:^(KCSUser *user, NSError *errorOrNil, KCSUserActionResult result)
+         {
+             NSLog(@"E: %@, U: %@, R: %ld", errorOrNil, user, (long)result);
+             [_webViewController dismissViewControllerAnimated:YES completion:^{
+                 NSLog(@"Dismissed");
+                 if (user){
+                     [self.navigationController dismissViewControllerAnimated:NO
+                                                                   completion:^{
+                                                                       if (self.completionBlock) {
+                                                                           self.completionBlock();
+                                                                           self.completionBlock = nil;
+                                                                       }
+                                                                   }];
+
+                 } else {
+                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOC(ERROR)
+                                                                         message: errorOrNil.localizedDescription ? errorOrNil.localizedDescription : LOC(ERR_SMTH_WENT_WRONG)
+                                                                        delegate:nil
+                                                               cancelButtonTitle:LOC(OKAY)
+                                                               otherButtonTitles:nil];
+                     [alertView show];
+
+                 }
+            }];
+         }];
+
+        return NO;
+    }
+    return YES;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    [_webViewController dismissViewControllerAnimated:YES completion:^{
+
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOC(ERROR)
+                                                            message: error.localizedDescription ? error.localizedDescription : LOC(ERR_SMTH_WENT_WRONG)
+                                                           delegate:nil
+                                                  cancelButtonTitle:LOC(OKAY)
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"Done");
+}
+
 - (IBAction)pressedLogin:(id)sender{
+
+#if 1
+    NSURL* url = [KCSUser URLforLoginWithMICRedirectURI:@"aw://"];
+
+    UIWebView *uiWebView = [[UIWebView alloc] initWithFrame: self.view.frame];
+    [uiWebView loadRequest:[NSURLRequest requestWithURL:url]];
+    uiWebView.delegate = self;
+
+    [_webViewController.view addSubview: uiWebView];
+
+    [self.navigationController presentViewController: _webViewController animated:YES completion:^{}];
+
+
 
 #if 0
     [KCSUser presentMICLoginViewControllerWithRedirectURI:@"aw://"
@@ -241,7 +312,7 @@
             //should never happen!
         }
     }];
-
+#endif
 #else
 
 	[DejalBezelActivityView activityViewForView:self.view];

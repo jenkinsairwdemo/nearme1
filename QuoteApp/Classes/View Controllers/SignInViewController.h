@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignInViewController : UIViewController
+@interface SignInViewController : UIViewController <UIWebViewDelegate>
 
 + (void)presentSignInFlowOnViewController:(UIViewController *)vc animated:(BOOL)animated onCompletion:(STEmptyBlock)success;
 
