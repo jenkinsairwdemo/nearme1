@@ -71,7 +71,7 @@
 "DV_DATA_STORAGE"="Phone: ";
 "DV_BUSINESS_EXECUTION_TIME_LIMIT"="Email: ";
 "DV_START_SUBSCRIPTION_DATE"="Project Details: ";
-"DV_TOTAL_COST"="Total Cost: ";
+"DV_TOTAL_COST"="Project Details: ";
 "DV_ORDER_TITLE"="Opportunity Details";
 "DV_QUOTE_TITLE"="Opportunity Details";
 "DV_MESSAGE_ERROR_CREATE_QUOTE"="Error create qoute";

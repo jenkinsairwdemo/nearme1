@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *businessLogicExecutionTimeLimitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *startSubscriptionDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalCostLabel;
+@property (weak, nonatomic) IBOutlet UITextView *productDescription;
 @property (weak, nonatomic) IBOutlet UILabel *productTitleLabel;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *productLabelHeightConstraint;
@@ -104,10 +105,11 @@
         if (item.backendEnvironments) self.backendEnvironmentsLabel.text = [LOC(DV_BACKEND_ENVIRONMENTS) stringByAppendingString:item.backendEnvironments];
         if (item.dataStorage) self.dataStorageLabel.text = [LOC(DV_DATA_STORAGE) stringByAppendingString:item.dataStorage];
         if (item.businessLogicExecutionTimeLimit) self.businessLogicExecutionTimeLimitLabel.text = [LOC(DV_BUSINESS_EXECUTION_TIME_LIMIT) stringByAppendingString:item.businessLogicExecutionTimeLimit];
-        if (item.totalPrice) self.totalCostLabel.text = [LOC(DV_TOTAL_COST) stringByAppendingString:item.totalPrice];
-//        if (item.startSubscriptionDate) self.startSubscriptionDateLabel.text = [LOC(DV_START_SUBSCRIPTION_DATE) stringByAppendingString:[[DataHelper instance].formatter stringFromDate:item.startSubscriptionDate]];
-//        if (item.startSubscriptionDate) self.startSubscriptionDateLabel.text = [LOC(DV_START_SUBSCRIPTION_DATE) stringByAppendingString:item.startSubscriptionDate];
+        if (item.totalPrice) self.totalCostLabel.text = LOC(DV_TOTAL_COST);
+        if (item.totalPrice) self.productDescription.text = item.totalPrice;
 
+        // Ensure that the titleLabel has the right text color
+        self.titleLabel.textColor = BAR_COLOR;
         if ([self.item isKindOfClass:[Order class]]) {
             self.titleLabel.text = LOC(DV_ORDER_TITLE);
         }else{
