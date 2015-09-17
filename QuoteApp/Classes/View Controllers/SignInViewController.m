@@ -245,16 +245,21 @@
     return YES;
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    [_webViewController dismissViewControllerAnimated:YES completion:^{
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    NSLog(@"Error in loading webview: %@", error);
 
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOC(ERROR)
-                                                            message: error.localizedDescription ? error.localizedDescription : LOC(ERR_SMTH_WENT_WRONG)
-                                                           delegate:nil
-                                                  cancelButtonTitle:LOC(OKAY)
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }];
+    if ((error.domain != NSURLErrorDomain || error.code != -999) &&
+        (![error.domain isEqualToString:@"WebKitErrorDomain"] && error.code != 102)){
+        [_webViewController dismissViewControllerAnimated:YES completion:^{
+
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOC(ERROR)
+                                                                message: error.localizedDescription ? error.localizedDescription : LOC(ERR_SMTH_WENT_WRONG)
+                                                               delegate:nil
+                                                      cancelButtonTitle:LOC(OKAY)
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }];
+    }
 
 }
 

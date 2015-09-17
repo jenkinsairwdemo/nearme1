@@ -75,18 +75,19 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AuthenticationHelper)
 }
 
 - (void)unregisteringCurrentDeviceOnPushServiceOnSuccess:(STEmptyBlock)successBlock onFailure:(STErrorBlock)failureBlock{
+    successBlock();
     
-    [[KCSPush sharedPush] unRegisterDeviceToken:^(BOOL success, NSError* error){
-        
-        //Return to main thread for update UI
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!error) {
-                if (successBlock) successBlock();
-            }else{
-                if (failureBlock) failureBlock(error);
-            }
-        });
-    }];
+//    [[KCSPush sharedPush] unRegisterDeviceToken:^(BOOL success, NSError* error){
+//        
+//        //Return to main thread for update UI
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            if (!error) {
+//                if (successBlock) successBlock();
+//            }else{
+//                if (failureBlock) failureBlock(error);
+//            }
+//        });
+//    }];
 }
 
 @end
